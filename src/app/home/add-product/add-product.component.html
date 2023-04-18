@@ -1,0 +1,77 @@
+<div class="modal-header">
+
+  <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="click()" ></button>
+</div>
+
+<div class="modal-body">
+
+  <form  #employeePost="ngForm" id="form" (ngSubmit)="onSubmit()">
+    <div class="form">
+      <label  class="label-form"  for="name">Product Name</label>
+      <input class="form-control ng-untouched ng-pristine ng-invalid"
+             type="text" name="name" id="name" [(ngModel)]="product.productName"
+             required #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+           class="alert alert-danger"></div>
+    </div>
+
+
+    <div class="form">
+      <label class="label-form"   for="email">Product Brand</label>
+      <input class="form-control ng-untouched ng-pristine ng-invalid"
+             type="text" email id="email" name="email"
+             [(ngModel)]="product.productBrand" required #email="ngModel">
+      <div [hidden]="email.valid || email.pristine"
+           class="alert alert-danger"></div>
+    </div>
+
+
+    <div class="form">
+      <label class="label-form" for="tittle">Category</label>
+      <input class="form-control ng-untouched ng-pristine ng-invalid"
+             type="text" id="tittle" name="tittle"
+             [(ngModel)]="product.productCategory" required #tittle="ngModel">
+      <div [hidden]="tittle.valid || tittle.pristine"
+           class="alert alert-danger"></div>
+    </div>
+
+
+    <div class="form">
+      <label class="label-form" for="phone">Price</label>
+      <input class="form-control ng-untouched ng-pristine ng-invalid"
+             #phone="ngModel"  type="text" id="phone" name="phone"
+             [(ngModel)]="product.price" required>
+      <div [hidden]="phone.valid || phone.pristine"
+           class="alert alert-danger"></div>
+    </div>
+    <ng-template #placeholder>
+        <div class="image-container avatar-placeholder">
+        </div>
+      </ng-template>
+      <label for="avatar-input-file">
+        <div class="icon-wrapper">
+          <input (change)="onFileChange($event)" type="file" name="file" ngModel  id="avatar-input-file" accept="image/*"/>
+          <i style="color: white" class="bi bi-pencil"></i>
+        </div>
+      </label>
+
+    <div class="modal-footer">
+      <button (click)="click()" type="button" class="btn btn-secondary">
+        Close
+      </button>
+
+
+      <button (click)="click()" [disabled]="!employeePost.valid" type="submit" class="btn btn-primary">
+        Publish
+      </button>
+
+    </div>
+
+
+  </form>
+</div>

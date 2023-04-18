@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Logo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Analytics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Customer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Orders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Transactions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Messages</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        <a href="#" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none disabled">
+        </a>
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <li>
+            <button (click)="addNewProduct()" class="btn btn-dark">Add product</button>
+          </li>
+        </ul>
+        <hr>
+        <div class="dropdown pb-4">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+            <span class="d-none d-sm-inline mx-1">loser</span>
+          </a>
+        </div>
+      </div>
+    </div>
+        <app-products-list></app-products-list>
+    </div>
+  </div>
+
+
+

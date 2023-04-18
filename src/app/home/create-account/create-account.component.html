@@ -1,0 +1,47 @@
+<section class="vh-100" style="background-color: rebeccapurple">
+  <div class="container py-4">
+    <div class="row justify-content-around">
+      <div class="col-md-5 col-lg-5 w-80">
+        <div class="card shadow-2-strong w-200" style="border-radius: 1rem">
+          <div  class="card-body p-5 text-center">
+            <h3 class="mb-5">Sign up</h3>
+
+            <form class="">
+
+              <label for="name">Name</label>
+              <input   [ngModel]="user.name" id="name" name="login" class="form-control" required minlength="4"
+                     ng-untouched ng-pristine ng-invalid
+                     #username="ngModel">
+              <div class="alert alert-danger" [hidden]="username.valid || username.pristine">Name is required</div>
+
+              <label for="lastname">Lastname</label>
+              <input [ngModel]="user.lastname" id="lastname" type="text" name="lastname" class="form-control"
+                     ng-untouched ng-pristine ng-invalid
+                     #lastname="ngModel" required>
+              <div class="alert alert-danger" [hidden]="lastname.valid || lastname.pristine">Lastname is required</div>
+
+              <label for="email">Email</label>
+              <input [ngModel]="user.email" id="email"  type="email" name="email" class="form-control"
+                     ng-untouched ng-pristine ng-invalid
+                     #email="ngModel" required>
+              <div class="alert alert-danger" [hidden]="email.valid || email.pristine"Email>Email is required</div>
+
+              <label for="password">Password</label>
+              <input [ngModel]="user.password" id="password" type="password" name="password" class="form-control"
+                     ng-untouched ng-pristine ng-invalid
+                     #password="ngModel" required>
+              <div class="alert alert-danger" [hidden]="email.valid || email.pristine"Email>Password is required</div>
+
+              <div class="form-check"></div>
+
+              <button  [disabled]="pending" (click)="registerAccount()" class="form-control btn btn-success btn-lg btn-block" type="submit">Create Account</button>
+              <p></p>
+
+            </form>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
